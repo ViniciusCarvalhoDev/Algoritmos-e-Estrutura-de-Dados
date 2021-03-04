@@ -649,3 +649,111 @@ int main() {
 Sua tarefa, neste exercício, será completar a implementação dos "Manipuladores de Instrução" (handlers). Um modelo descrevendo a estrutura de manipuladores pode ser vista abaixo:
 
 ![alt text](http://url/to/https://i.pinimg.com/originals/43/31/89/433189003be0750303a1d6a52b5f9500.jpg)
+
+As declarações de todas as funções já estão feitas para você. Você terá tão somente que implementar as funções handle de cada manipulador. A título de exemplo, abaixo pode ser vista a implementação da função handle da classe HandlerAdd:
+
+void HandlerAdd::handle(Instruction *inst) {
+  if (inst->msg.compare("add") == 0) {
+    fer_assert(_stack->size() >= 2, "Erro: poucos argumentos na pilha.");
+    const int v1 = _stack->top();
+    _stack->pop();
+    const int v2 = _stack->top();
+    _stack->pop();
+    const int vv = v1 + v2;
+    _stack->push(vv);
+  } else {
+    fer_assert(_next != NULL, "Erro: comando desconhecido.");
+    _next->handle(inst);
+  }
+}
+
+Note que estamos realizando o tratamento de erro com a função fer_assert. Essa função é mostrada logo abaixo:
+
+void fer_assert(const bool expr, const char* msg) {
+  if (!expr) {
+    std::cout << msg << std::endl;
+    exit(1);
+  }
+}
+
+Você pode usar qualquer outra função para realizar o tratamento de erro. Contudo, você deve imprimir mensagens de erro na saída padrão, não na saída de erro, para que a correção automática possa funcionar. Caso um erro aconteça, seu programa deve imprimir uma mensagem, e então interromper o programa. Os dois tipos de mensagem de erro possíveis são (Lembre-se de imprimir um ponto no final da mensagem de erro):
+
+Erro: poucos argumentos na pilha. Essa mensagem é disparada quando a pilha não contém argumentos suficientes para a realização de alguma operação.
+Erro: comando desconhecido. Essa mensagem é disparada quando não existe nenhum manipulador para tratar um determinado tipo de instrução.
+
+A declaração dos manipuladores e da classe de instrução está disponível em um dos arquivos que fazem parte do trabalho: Handler.h. Abaixo são dados alguns testes. Procure usá-los como exemplo para entender o funcionamento da máquina de pilha:
+
+
+=== input ===
+push 13
+push 29
+add
+print
+pop
+=== output ===
+42
+
+=== input ===
+push 2
+push 2
+mul
+print
+push 2
+mul
+print
+push 2
+mul
+print
+push 2
+mul
+print
+=== output ===
+4
+8
+16
+32
+
+=== input ===
+push 2
+push 3
+push 4
+push 5
+mul
+print
+mul
+print
+mul
+print
+=== output ===
+20
+60
+120
+
+=== input ===
+push 2
+print
+push 3
+print
+pop
+add
+=== output ===
+2
+3
+Erro: poucos argumentos na pilha.
+
+=== input ===
+push 2
+print
+push 3
+print
+add
+print
+=== output ===
+2
+3
+5
+
+Problema 7 --------------------------------------------------------- / - / -----------------------------------------------------------------------------------------
+
+Implemente no arquivo Stack.cpp a classe Stack (pilha de números inteiros) declarada no arquivo Stack.h.
+Sua implementação deve passar em todos os testes definidos no arquivo Main.cpp.
