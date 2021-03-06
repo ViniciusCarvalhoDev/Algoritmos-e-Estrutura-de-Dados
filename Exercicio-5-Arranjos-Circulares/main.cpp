@@ -71,7 +71,7 @@ void test_add_then_get() {
 
 template <class T>
 void test_add_or_get() {
-  RingArray<T, 8> r;
+  RingArray<T, 11> r;
   T value;
   char c;
   while (std::cin >> c) {
