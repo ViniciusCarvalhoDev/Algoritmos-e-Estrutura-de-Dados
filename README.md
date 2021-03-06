@@ -1,7 +1,7 @@
 # Algoritmos-e-Estrutura-de-Dados
 Coleção de problemas, soluções e implementação de algumas estruturas de dados usando C++
 
-Problema 1 --------------------------------------------------------- / - / -----------------------------------------------------------------------------------------
+Problema 1 ------------------------------------------------------------------------------------------------------------------------
 
 Escreva um programa para contar a frequência de palavras em um texto. Seu programa deve usar a função main abaixo para ler a entrada padrão, e imprimir resultados:
 
@@ -93,7 +93,7 @@ $ ./a.out < t2.txt
 
 Atenção: você deve enviar os arquivos main.cpp, WordCounter.hpp, WordCounter.cpp, Word.hpp e Word.cpp.
 
-Problema 2 --------------------------------------------------------- / - / -----------------------------------------------------------------------------------------
+Problema 2 -------------------------------------------------------------------------------------------------------------------------------
 
 Neste exercício você deverá completar as classes List e Node. A classe List representa uma lista encadeada de inteiros. Cada elo dessa lista é uma instância da classe Node:
 
@@ -192,7 +192,7 @@ $ cat t2.txt
 $ ./a.out < t2.txt 
 s:9, m:5, l:1, r:9, m:4, l:1, m:3, l:8
 
-Problema 3 --------------------------------------------------------- / - / -----------------------------------------------------------------------------------------
+Problema 3 ------------------------------------------------------------------------------------------------------------------------------
 
 Neste exercício você irá implementar uma função genérica <T>GetMaxDefault(T a, T b, T c). Essa função recebe três argumentos, e retorna o maior entre os dois primeiros, ou o terceiro argumento, caso não exista um maior entre os dois primeiros. A função opera sobre tipos que reconhecem uma ordem total ou parcial.  Uma ordem, estabelecida sobre um conjunto, é dita total caso, dados dois elementos diferentes do conjunto, sempre for possível definir o maior deles. A ordem é dita parcial quando isso não for possível sempre. Por exemplo, o conjunto dos números inteiros define uma ordem total: dados dois números diferentes, sempre há um maior. Por outro lado, um conjunto potência, ordenado por inclusão, define uma ordem parcial. Se um subconjunto A contiver um subconjunto B, então A é dito maior que B, e de modo análogo, se um subconjunto B contiver um subconjunto A, então B é dito maior que A. Porém, é possível que nem A esteja em B, nem B esteja em A. Nesse caso, a ordem entre A e B não é definida. Quando a ordem parcial entre os dois primeiros elements, a e b, não estiver definida, sua função GetMaxDefault(a, b, c) deve retornar o terceiro elemento, c. Para lhe ajudar, a declaração de GetMaxDefault é dada abaixo:
 
@@ -341,7 +341,7 @@ b 24 28
 <--|||--------------------------->
 <--|||--------------------------->
 
-Problema 4 --------------------------------------------------------- / - / -----------------------------------------------------------------------------------------
+Problema 4 ------------------------------------------------------------------------------------------------------------------------
 
 Neste exercício você deverá implementar quatro operadores sobre a class Point, cuja declaração pode ser vista logo abaixo:
 
@@ -447,7 +447,7 @@ p
 output
 (2, 3) (-2, 4) (1, 5.5) (-3, -1)
 
-Problema 5 --------------------------------------------------------- / - / -----------------------------------------------------------------------------------------
+Problema 5 -----------------------------------------------------------------------------------------------------------------------------
 
 Neste exercício você deverá implementar um arranjo circular. Um arranjo circular é uma estrutura de dados com capacidade finita, e duas operações, add e get. A primeira operação adiciona um elemento ao arranjo, e a segunda retorna o mais antigo elemento inserido nele. Use a declaração abaixo para entender como funciona essa estrutura de dados:
 
@@ -601,7 +601,7 @@ $> X=4; echo "D + 1.0 - -" > t$X.txt ; ./a.out < t$X.txt
 1
 Erro: anel vazio.
 
-Problema 6 --------------------------------------------------------- / - / -----------------------------------------------------------------------------------------
+Problema 6 ----------------------------------------------------------------------------------------------------------------------------
 
 Neste exercício aprenderemos sobre mais um padrão de projetos: a Cadeia de Responsabilidade, ou Chain of Responsibility (CR), como originalmente chamado. Uma CR é um padrão bem parecido com o Decorator, que já vimos em um exercício anterior. Porém, em vez de todos os objetos da cadeia realizarem uma ação sobre o dado, na CR, somente um objeto perfaz tal ação.
 
@@ -648,7 +648,7 @@ int main() {
 
 Sua tarefa, neste exercício, será completar a implementação dos "Manipuladores de Instrução" (handlers). Um modelo descrevendo a estrutura de manipuladores pode ser vista abaixo:
 
-![alt text](http://url/to/https://i.pinimg.com/originals/43/31/89/433189003be0750303a1d6a52b5f9500.jpg)
+![alt text](https://github.com/ViniciusCarvalhoDev/Algoritmos-e-Estrutura-de-Dados/blob/master/ChainOfResponsibility.png?raw=true)
 
 As declarações de todas as funções já estão feitas para você. Você terá tão somente que implementar as funções handle de cada manipulador. A título de exemplo, abaixo pode ser vista a implementação da função handle da classe HandlerAdd:
 
@@ -753,7 +753,7 @@ print
 3
 5
 
-Problema 7 --------------------------------------------------------- / - / -----------------------------------------------------------------------------------------
+Problema 7 -------------------------------------------------------------------------------------------------------------------------------------
 
 Implemente no arquivo Stack.cpp a classe Stack (pilha de números inteiros) declarada no arquivo Stack.h.
 Sua implementação deve passar em todos os testes definidos no arquivo Main.cpp.
