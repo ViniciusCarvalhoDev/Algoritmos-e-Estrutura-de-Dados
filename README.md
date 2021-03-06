@@ -648,7 +648,7 @@ int main() {
 
 Sua tarefa, neste exercício, será completar a implementação dos "Manipuladores de Instrução" (handlers). Um modelo descrevendo a estrutura de manipuladores pode ser vista abaixo:
 
-![alt text](https://github.com/ViniciusCarvalhoDev/Algoritmos-e-Estrutura-de-Dados/blob/main/ChainOfResponsibility.png?raw=true)
+![alt text](https://github.com/ViniciusCarvalhoDev/Algoritmos-e-Estrutura-de-Dados/blob/main/Exercicio-6-Cadeia-de_Responsabilidade/ChainOfResponsibility.png?raw=true)
 
 As declarações de todas as funções já estão feitas para você. Você terá tão somente que implementar as funções handle de cada manipulador. A título de exemplo, abaixo pode ser vista a implementação da função handle da classe HandlerAdd:
 
